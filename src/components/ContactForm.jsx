@@ -14,7 +14,7 @@ function ContactForm() {
         message: e.target.message.value,
       };
     
-      const res = await fetch('http://localhost:5000/contact', {
+      const res = await fetch('https://next-tog-backend.onrender.com/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
