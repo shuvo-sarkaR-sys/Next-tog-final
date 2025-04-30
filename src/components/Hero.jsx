@@ -26,21 +26,22 @@ const Hero = () => {
       setHeroImage(randomImage);
     }, []);
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative   w-full h-screen overflow-hidden">
     <img
       src={heroImage}
       alt="Hero"
       className="w-full h-full object-cover animate-zoom"
     />
-    <div className=' flex w-full justify-center absolute top-5 '>
+    <div className=' flex w-full justify-center absolute top-5 z-20'>
     <FadeUp><Link to="/"><img className='  w-48' src={logo} alt="" /></Link></FadeUp>
     </div>
-    <div className='absolute md:top-[400px] top-[250px] xl:top-[300px] w-full text-center'>
+    <div className='bg-black/10 h-full w-full absolute top-0 z-10'></div>
+    <div className='absolute z-20 md:top-[400px] top-[250px] xl:top-[300px] w-full text-center'>
       <FadeUp> <h1 className="text-white title-text text-5xl md:text-[60px] font-bold">
   SIMPLIFY <span className="italic title-text-under font-normal">business</span>. SIMPLIFY <span className="italic title-text-under font-normal">life</span>.
 </h1></FadeUp>
     </div>
-    <Link to='/mediakit'><div className='absolute md:right-12 right-8 bottom-2 w-38'>
+    <Link to='/mediakit'><div className='absolute z-20 md:right-12 right-8 bottom-2 w-38'>
    <FadeUp><img className='animation-1' src={media} alt="" />
     <img className='relative bottom-24 w-11 left-14' src={sp} alt="" /></FadeUp> 
     </div></Link>
