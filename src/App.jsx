@@ -7,6 +7,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NewsRoom from './pages/NewsRoom'
 import Footer from './components/Footer'
 import MediaKit from './pages/MediaKit'
+import Login from './components/Login'
+import Dashboard from './pages/Dashboard'
+import PrivateRoute from './components/PrivateRoute'
 function App() {
  
 
@@ -17,6 +20,8 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/newsroom' element={<NewsRoom/>}/>
       <Route path='/mediakit' element={<MediaKit/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/dashboard' element={<PrivateRoute><Dashboard/></PrivateRoute>} />
       </Routes>
       <Footer/>
        </BrowserRouter>

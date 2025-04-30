@@ -10,6 +10,10 @@ import media from '../assets/sp1.png'
 import sp from '../assets/sp2.png'
 import FadeUp from './FadeUp';
 import { Link } from 'react-router-dom';
+ 
+ 
+import { useNavigate } from 'react-router-dom';
+
 const images = [
   arab,
     chinese,
@@ -19,6 +23,24 @@ bangladesh
    
 ];
 const Hero = () => {
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('jwtToken');
+    setIsLoggedIn(!!token);
+  }, []);
+
+  const handleAuthClick = () => {
+    if (isLoggedIn) {
+      localStorage.removeItem('jwtToken');
+      setIsLoggedIn(false);
+      navigate('/');
+    } else {
+      navigate('/');
+    }
+  };
+
     const [heroImage, setHeroImage] = useState("");
 
     useEffect(() => {
@@ -27,6 +49,8 @@ const Hero = () => {
     }, []);
   return (
     <div className="relative   w-full h-screen overflow-hidden">
+          <Link to='/login'><button onClick={handleAuthClick} className='absolute cursor-pointer hover:bg-black/5 top-8 z-30 right-10 py-3 px-6 rounded-3xl text-white border'>{isLoggedIn ? 'LogOut' : 'Login'}</button></Link>
+
     <img
       src={heroImage}
       alt="Hero"
@@ -35,7 +59,7 @@ const Hero = () => {
     <div className=' flex w-full justify-center absolute top-5 z-20'>
     <FadeUp><Link to="/"><img className='  w-48' src={logo} alt="" /></Link></FadeUp>
     </div>
-    <div className='bg-black/10 h-full w-full absolute top-0 z-10'></div>
+     <div className='bg-black/10 h-full w-full absolute top-0 z-10'></div>
     <div className='absolute z-20 md:top-[400px] top-[250px] xl:top-[300px] w-full text-center'>
       <FadeUp> <h1 className="text-white title-text text-5xl md:text-[60px] font-bold">
   SIMPLIFY <span className="italic title-text-under font-normal">business</span>. SIMPLIFY <span className="italic title-text-under font-normal">life</span>.

@@ -9,6 +9,7 @@ import d4 from '../assets/d4.svg'
 import d5 from '../assets/d5.svg'
 import d6 from '../assets/d6.svg'
  import { Link } from 'react-router-dom'
+ import '../index.css'
 const MediaKit = () => {
     const handleDownload1 = () => {
         const link = document.createElement('a');
@@ -62,7 +63,7 @@ const MediaKit = () => {
     <div >
 
     <div className='bg-image  pt-10 h-[400px]'>
-      <Link to="/"><img className='w-48  mx-auto' src={logo} alt="" /></Link>
+      <Link to="/"><img className='w-48    mx-auto' src={logo} alt="" /></Link>
       <br />
       <br />
       <br />
