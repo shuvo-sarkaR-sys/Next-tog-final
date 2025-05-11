@@ -12,7 +12,7 @@ const BlogList = ({ blogs, fetchBlogs, setEditingBlog }) => {
           <img className='w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110' src={`https://next-tog-backend.onrender.com${blog.imageUrl}`} alt="blog"  />
           <div className='absolute  text-white backdrop-blur-xs bottom-0 py-5 px-10'>
           <h2 className="text-xl font-semibold mt-2">{blog.title}</h2>
-          <p className='max-h-10'>{blog.description}</p>
+          <p className='max-h-10 bg-black/20'>{blog.description}</p>
           <div className="mt-2 space-x-2">
             <button className="bg-yellow-500 text-white px-3 py-1 rounded" onClick={() => setEditingBlog(blog)}>Edit</button>
             <button className="bg-red-500 text-white px-3 py-1 rounded" onClick={() => handleDelete(blog._id)}>Delete</button>
