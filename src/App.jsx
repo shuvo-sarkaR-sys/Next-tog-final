@@ -15,6 +15,7 @@ function App() {
 
   return (
     <>
+    
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Home/>}/>
@@ -22,6 +23,7 @@ function App() {
       <Route path='/mediakit' element={<MediaKit/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/dashboard' element={<PrivateRoute><Dashboard/></PrivateRoute>} />
+      
       </Routes>
       <Footer/>
        </BrowserRouter>
