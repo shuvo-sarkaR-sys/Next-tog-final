@@ -25,8 +25,8 @@ import FadeUp from '../components/FadeUp.jsx'
         
        
         {blogs.map((blog) => (
-            <FadeUp>
-             <div key={blog._id} className="relative group bg-white shadow-md rounded-2xl   overflow-hidden justify-center w-[320px]  h-[450px]">
+            <FadeUp key={blog._id}>
+             <div  className="relative group bg-white shadow-md rounded-2xl   overflow-hidden justify-center w-[320px]  h-[450px]">
                
               <img className='w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110' src={`https://next-tog-backend.onrender.com${blog.imageUrl}`} alt="" />
               

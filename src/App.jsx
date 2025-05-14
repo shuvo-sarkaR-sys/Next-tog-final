@@ -10,6 +10,8 @@ import MediaKit from './pages/MediaKit'
 import Login from './components/Login'
 import Dashboard from './pages/Dashboard'
 import PrivateRoute from './components/PrivateRoute'
+import ContactForm from './components/ContactForm'
+import BlogDetails from './pages/BlogDetails'
 function App() {
  
 
@@ -23,7 +25,8 @@ function App() {
       <Route path='/mediakit' element={<MediaKit/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/dashboard' element={<PrivateRoute><Dashboard/></PrivateRoute>} />
-      
+      <Route path='/contactus' element={<ContactForm/>}/>
+       <Route path="/blog/:id" element={<BlogDetails />} />
       </Routes>
       <Footer/>
        </BrowserRouter>

@@ -3,7 +3,7 @@ import logo from '../assets/Logo-Transperant.png'
 import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
-    <div className='bg-[#612d73] pt-10'>
+    <div className='bg-[#098de4] pt-10'>
 
 
       <div className='flex mx-5 md:mx-20 flex-wrap border-b pb-10 border-gray-400 items-center  justify-between gap-10 xl:mx-40'>

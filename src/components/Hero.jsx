@@ -1,9 +1,9 @@
 import React from 'react'
 import { useEffect, useState } from "react";
-import arab from '../assets/arab-desktop.jpg'
+import arab from '../assets/18212 (1).jpg'
 import chinese from '../assets/chinese-desktop.jpg'
 import afro from '../assets/afro-desktop.jpg'
-import british from '../assets/british-desktop.jpg'
+import british from '../assets/1237.jpg'
 import bangladesh from '../assets/bangladeshi-desktop.jpg'
 import logo from '../assets/Logo-Transperant.png'
 import media from '../assets/sp1.png'
@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
  
  
 import { useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const images = [
   arab,
@@ -49,8 +50,9 @@ const Hero = () => {
     }, []);
   return (
     <div className="relative   w-full h-screen overflow-hidden">
-          <Link to='/login'><button onClick={handleAuthClick} className='absolute cursor-pointer hover:bg-black/5 top-8 z-30 right-10 py-3 px-6 rounded-3xl text-white border'>{isLoggedIn ? 'LogOut' : 'Login'}</button></Link>
-
+          <Link to='/login'><button onClick={handleAuthClick} className='absolute cursor-pointer hover:bg-black/5 top-8 z-30 right-28 py-3 px-6 rounded-3xl text-white border'>{isLoggedIn ? 'LogOut' : 'Login'}</button></Link>
+          {/* navbar start from here */}
+          <Navbar/>
     <img
       src={heroImage}
       alt="Hero"

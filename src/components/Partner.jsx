@@ -16,11 +16,11 @@ const Partner = () => {
     const logos = [p1, p2, p3, p4, p5, p6, p7, p8,]
     return (
         <div className="py-20 ">
-          <FadeUp>  <h1 className="text-[#6a2d73] titile-text mb-20 text-center text-3xl font-bold">PARTNERS</h1></FadeUp>
-            <div className="w-full py-10  sm:py-20 sm:pt-24 xl:py-30 px-10 sm:px-20  md:px-20 xl:px-40 bg-[#bdbec0] ">
+          <FadeUp>  <h1 className="text-[#098de4] titile-text mb-20 text-center text-4xl font-bold">Business PARTNERS</h1></FadeUp>
+            <div className="w-full py-10  sm:py-10   xl:py-10 px-10 sm:px-20  md:px-20 xl:px-40 bg-[#bdbec0] ">
                 <Swiper 
                     modules={[Autoplay]}
-                    slidesPerView={6}
+                    slidesPerView={5}
                     spaceBetween={30}
                     loop={true}
                     autoplay={{
@@ -32,13 +32,13 @@ const Partner = () => {
 
                     {logos.map((logo, index) => (
                         <SwiperSlide   key={index}>
-                             
+                             <div className='flex justify-center gap-20 items-center h-20 my-auto'>
                                 <img
                                     src={logo}
                                     alt={`Logo ${index}`}
                                     className=" object-contain my-auto"
                                 />
-                             
+                             </div>
                         </SwiperSlide>
                     ))}
 

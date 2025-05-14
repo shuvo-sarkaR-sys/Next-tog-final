@@ -2,12 +2,19 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import BlogForm from '../components/BlogForm'
 import BlogList from '../components/BlogList';
-
+import ServiceForm from '../components/ServiceForm';
+import ServiceList from '../components/ServiceList';
  import { Link } from 'react-router-dom';
 const Dashboard = () => { 
   
   const [blogs, setBlogs] = useState([]);
   const [editingBlog, setEditingBlog] = useState(null);
+const [services, setServices] = useState([]);
+  const [editingService, setEditingService] = useState(null);
+   const fetchServices = async () => {
+    const res = await axios.get('https://next-tog-backend.onrender.com/api/services');
+    setServices(res.data);
+  };
 
   const fetchBlogs = async () => {
     const res = await axios.get('https://next-tog-backend.onrender.com/api/blogs');
@@ -16,6 +23,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetchBlogs();
+    fetchServices();
   }, []);
 
   return (
@@ -27,6 +35,12 @@ const Dashboard = () => {
       <div className="p-4">
        <BlogForm fetchBlogs={fetchBlogs} editingBlog={editingBlog} setEditingBlog={setEditingBlog} />
       <BlogList blogs={blogs} fetchBlogs={fetchBlogs} setEditingBlog={setEditingBlog} />
+
+    </div>
+     <div className="p-4">
+      <h1 className="text-2xl md:mx-40 mx-10 font-bold mb-4">Service Manager</h1>
+      <ServiceForm fetchServices={fetchServices} editingService={editingService} setEditingService={setEditingService} />
+      <ServiceList services={services} fetchServices={fetchServices} setEditingService={setEditingService} />
     </div>
     </div>
   )
