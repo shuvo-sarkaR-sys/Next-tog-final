@@ -12,7 +12,14 @@ const BlogForm = ({fetchBlogs, editingBlog, setEditingBlog}) => {
     if (editingBlog) {
       setTitle(editingBlog.title);
       setDescription(editingBlog.description);
-      setStartDate(new Date(editingBlog.startDate))
+          const parsedDate = editingBlog.startDate ? new Date(editingBlog.startDate) : null;
+    if (parsedDate && !isNaN(parsedDate)) {
+      setStartDate(parsedDate);
+    } else {
+      console.warn('Invalid startDate:', editingBlog.startDate);
+      setStartDate(new Date()); // fallback to current date
+    }
+
     }
   }, [editingBlog]);
 
