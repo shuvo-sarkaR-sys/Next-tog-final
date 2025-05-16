@@ -23,7 +23,7 @@ const Login = () => {
     setSuccess('');
 
     try {
-      const res = await axios.post('https://next-tog-backend.onrender.com/api/login', formData); // Replace with your backend URL
+      const res = await axios.post('http://localhost:5000/api/login', formData); // Replace with your backend URL
       const token = res.data.token;
 
       // Store JWT in localStorage (or use httpOnly cookie for better security)

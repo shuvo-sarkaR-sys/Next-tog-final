@@ -17,7 +17,7 @@ const Blogs= () => {
       {latestBlogs.map(blog => (
         <FadeUp key={blog._id}>
         <Link to={`/blog/${blog._id}`}><div  className="relative group bg-white shadow-md rounded-2xl   overflow-hidden justify-center w-[320px]  h-[450px]">
-          <img className='w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110'  src={`https://next-tog-backend.onrender.com${blog.imageUrl}`} alt=""   />
+          <img className='w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110'  src={blog.imageUrl} alt=""   />
           <div className='absolute  text-white backdrop-blur-xs bottom-0 py-5 px-10'>
             <p><strong>Publish Date: </strong>{new Date(blog.date).toLocaleDateString()}</p>
           <h1 className='text-xl h-8 overflow-hidden font-semibold' >{blog.title}</h1>

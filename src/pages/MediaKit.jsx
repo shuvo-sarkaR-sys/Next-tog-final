@@ -10,6 +10,7 @@ import d5 from '../assets/d5.svg'
 import d6 from '../assets/d6.svg'
  import { Link } from 'react-router-dom'
  import '../index.css'
+ import Navbar from '../components/Navbar'
 const MediaKit = () => {
     const handleDownload1 = () => {
         const link = document.createElement('a');
@@ -105,6 +106,7 @@ const MediaKit = () => {
     </div>
 </div>
     <ContactForm/>
+    <Navbar/>
     </div>
   )
 }

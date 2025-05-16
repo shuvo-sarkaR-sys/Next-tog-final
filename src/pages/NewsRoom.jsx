@@ -5,6 +5,7 @@ import FadeUp from '../components/FadeUp.jsx'
  import '../index.css'
  import logo from '../assets/Logo-Transperant.png'
  import { Link } from 'react-router-dom'
+ import Navbar from '../components/Navbar.jsx'
  const NewsRoom = () => {
       const [blogs, setBlogs] = useState([])
 
@@ -28,7 +29,7 @@ import FadeUp from '../components/FadeUp.jsx'
             <FadeUp key={blog._id}>
              <div  className="relative group bg-white shadow-md rounded-2xl   overflow-hidden justify-center w-[320px]  h-[450px]">
                
-              <img className='w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110' src={`https://next-tog-backend.onrender.com${blog.imageUrl}`} alt="" />
+              <img className='w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110' src={blog.imageUrl} alt="" />
               
               <div  className='absolute  text-white backdrop-blur-xs bottom-0 py-5 px-10'>
                <p>{blog.title}</p>
@@ -38,6 +39,7 @@ import FadeUp from '../components/FadeUp.jsx'
         ))}
     
     </div>
+    <Navbar/>
     </div>
   )
 }

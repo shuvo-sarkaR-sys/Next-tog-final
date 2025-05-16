@@ -10,7 +10,7 @@ const BlogList = ({ blogs, fetchBlogs, setEditingBlog }) => {
     <div className="flex flex-wrap mx-10 md:mx-40 my-14  gap-4">
       {blogs.map((blog) => (
         <div key={blog._id} className="relative group bg-white shadow-md rounded-2xl   overflow-hidden justify-center w-[160px]  h-[225px]">
-          <img className='w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110' src={`https://next-tog-backend.onrender.com${blog.imageUrl}`} alt="blog"  />
+          <img className='w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110' src={blog.imageUrl} alt="blog"  />
           <div className='absolute  text-white backdrop-blur-xs bottom-0 py-0 px-5'>
           <h2 className="text-sm font-semibold mt-2">{dayjs(blog.date).format('MMM D, YYYY')}</h2>
           <h1 className='max-h-5 text-sm max-w-[120px] overflow-hidden   bg-black/10'>{blog.title}</h1>

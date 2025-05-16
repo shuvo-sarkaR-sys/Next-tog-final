@@ -5,6 +5,7 @@ import BlogList from '../components/BlogList';
 import ServiceForm from '../components/ServiceForm';
 import ServiceList from '../components/ServiceList';
  import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 const Dashboard = () => { 
   
   const [blogs, setBlogs] = useState([]);
@@ -28,9 +29,9 @@ const [services, setServices] = useState([]);
 
   return (
     <div>
-       <div className='flex justify-between mr-5 mt-5'>
+       <div className='flex mb-10 justify-between mr-28 mt-10'>
       <h1 className='text-4xl ml-5'>dashboard</h1>
-      <Link to='/'><h1>Back to home</h1></Link>
+      <Link to='/'><h1 >Back to home</h1></Link>
       </div>
       <div className="p-4">
        <BlogForm fetchBlogs={fetchBlogs} editingBlog={editingBlog} setEditingBlog={setEditingBlog} />
@@ -42,6 +43,7 @@ const [services, setServices] = useState([]);
       <ServiceForm fetchServices={fetchServices} editingService={editingService} setEditingService={setEditingService} />
       <ServiceList services={services} fetchServices={fetchServices} setEditingService={setEditingService} />
     </div>
+    <Navbar />
     </div>
   )
 }

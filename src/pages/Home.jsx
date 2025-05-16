@@ -19,7 +19,7 @@ const Home = () => {
       <Maps/>
       <Partner/>
       <News/>
-      <ContactForm/>
+       
     </div>
   )
 }

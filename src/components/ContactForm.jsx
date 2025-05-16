@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Navbar from './Navbar';
 function ContactForm() {
 
   const [text, setText] =useState(false)
@@ -32,7 +32,7 @@ function ContactForm() {
     };
   
     return (
-      <div className='relative'>
+      <div className='relative mt-10'>
         <h1 className='text-center text-[#098de4] text-5xl'>GET IN TOUCH</h1>
       <form className='flex flex-col p-20 mx-auto max-w-[900px] justify-center' onSubmit={handleSubmit}>
         <input className=' border-b-2 pb-2 px-5 pt-4 text-lg border-gray-300 focus:outline-none focus:border-[#0866fd] ' name="name" type="text" required placeholder="Name" />
@@ -44,7 +44,9 @@ function ContactForm() {
 </span></button>
       </form>
       {text ? (<p className='absolute text-center px-5 rounded-2xl py-2 border bottom-[100px] left-[200px] bg-[#225bec95] text-white'>done</p>):(<p></p>)}
+      <Navbar/>
       </div>
+      
     );
   }
   export default ContactForm;

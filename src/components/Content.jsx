@@ -20,7 +20,7 @@ const Content = () => {
        {serviceShow.map((service)=>(
         <div key={service._id} className='relative rounded-4xl  overflow-hidden md:w-[46%]'>
           <FadeUp>   
-            <img className=' w-full h-full object-cover' src={`https://next-tog-backend.onrender.com${service.imageUrl}`} alt="" />
+            <img className=' w-full h-full object-cover' src={service.imageUrl} alt="" />
             <div className='absolute left-10 md:bottom-4 xl:bottom-10'>
                 <h1 className='text-white max-h-20 overflow-hidden font-bold text-3xl '>{service.title}</h1>
                 <br />

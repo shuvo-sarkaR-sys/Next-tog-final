@@ -27,7 +27,7 @@ const BlogDetails = () => {
       {/* Blog content */}
       <div className="max-w-4xl mx-auto px-4 py-10">
        <div className='flex flex-wrap gap-10'> <img
-          src={`https://next-tog-backend.onrender.com${blog.imageUrl}`}
+          src={blog.imageUrl}
           alt={blog.title}
           className=" max-h-[400px] object-cover mb-6 rounded-lg shadow"
         />

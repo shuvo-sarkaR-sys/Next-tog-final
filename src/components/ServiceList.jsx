@@ -12,7 +12,7 @@ function ServiceList({ services, fetchServices, setEditingService }) {
       {services.map((service) => (
         <div key={service._id} className="relative rounded-4xl  overflow-hidden md:w-1/5">
           {service.imageUrl && (
-            <img src={`https://next-tog-backend.onrender.com${service.imageUrl}`} alt="service" className=' w-full h-full  object-cover'  />
+            <img src={service.imageUrl} alt="service" className=' w-full h-full  object-cover'  />
           )}
           <div  className='absolute mx-3 bottom-2'>
           <h2 className='text-white max-h-7 mr-2 overflow-hidden font-bold text-xl '>{service.title}</h2>
