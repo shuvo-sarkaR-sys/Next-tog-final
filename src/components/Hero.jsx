@@ -58,7 +58,7 @@ const Hero = () => {
       alt="Hero"
       className="w-full h-full object-cover animate-zoom"
     />
-    <div className=' flex w-full justify-center absolute top-5 z-20'>
+    <div className=' flex w-full justify-items-start md:justify-center absolute top-5 z-20'>
     <FadeUp><Link to="/"><img className='  w-48' src={logo} alt="" /></Link></FadeUp>
     </div>
      <div className='bg-black/10 h-full w-full absolute top-0 z-10'></div>
