@@ -16,11 +16,13 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 
 const images = [
-  arab,
+
     chinese,
+      arab,
 afro,
+bangladesh,
 british,
-bangladesh
+
    
 ];
 const Hero = () => {

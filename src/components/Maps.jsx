@@ -86,7 +86,7 @@ const Maps = () => {
           </div>
           </div>
         </div>
-        <div className='rounded-2xl group overflow-hidden h-[490px] w-full xl:w-[60%]'>
+        <div className='rounded-2xl group overflow-hidden md:h-[490px] w-full xl:w-[60%]'>
           <FadeUp>
           <img className='object-cover rounded-2xl transition-transform duration-700 ease-out group-hover:scale-110' src={img5} alt="" />
           </FadeUp>
@@ -94,7 +94,7 @@ const Maps = () => {
       </div>
       <div >
     <FadeUp>
-      <div className="max-w-[1170px] my-20 mx-auto flex flex-wrap justify-center">
+      <div className="max-w-[1170px] md:my-20 my-10 mx-auto flex flex-wrap justify-center">
      
       <InView triggerOnce={true}>
         {({ inView, ref }) => (
