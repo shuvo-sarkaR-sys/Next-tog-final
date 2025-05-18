@@ -36,8 +36,8 @@ const Stories = () => {
 
   return (
     <div>
-     <FadeUp> <h1 className="text-center titile-text text-[#098de4] text-5xl font-bold my-6">Our Success</h1></FadeUp>
-      <div className="w-full max-w-5xl md:my-20 mx-auto p-4">
+     <FadeUp> <h1 className="text-center titile-text text-[#098de4] text-5xl font-bold md:mt-14 my-6">Our Success</h1></FadeUp>
+      <div className="w-full max-w-5xl mx-auto p-4">
         <Swiper
           spaceBetween={20}
           breakpoints={{

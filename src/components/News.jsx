@@ -8,7 +8,7 @@ import Blogs from './Blogs';
    return (
     <div>
     <FadeUp> <h1 className="text-center titile-text text-[#098de4] text-5xl font-bold my-6">FEATURED NEWS</h1></FadeUp>
-     <div className="w-full flex gap-10 flex-wrap justify-center my-20 mx-auto p-4">
+     <div className="w-full flex gap-10 flex-wrap justify-center my-14 mx-auto p-4">
         
       <Blogs/>
      
