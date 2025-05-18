@@ -94,7 +94,7 @@ const Maps = () => {
       </div>
       <div >
     <FadeUp>
-      <div className="max-w-[1170px] md:mt-20 md:mb-14 my-10 mx-auto flex flex-wrap justify-center">
+      <div className="max-w-[1170px] md:mt-20 mt-10 mx-auto flex flex-wrap justify-center">
      
       <InView triggerOnce={true}>
         {({ inView, ref }) => (
