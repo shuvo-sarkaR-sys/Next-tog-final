@@ -34,7 +34,7 @@ import FadeUp from '../components/FadeUp.jsx'
               <div  className='absolute  text-white backdrop-blur-xs bottom-0 py-5 px-10'>
                  <p><strong>Publish Date: </strong>{new Date(blog.date).toLocaleDateString()}</p>
           <h1 className='text-xl h-8 overflow-hidden font-semibold' >{blog.title}</h1>
-          <p className='text-gray-300 h-14 overflow-hidden group-hover:underline-offset-1'>{blog.description}</p></div>
+          <p className='text-gray-300 h-13 overflow-hidden group-hover:underline-offset-1'>{blog.description}</p></div>
             </div></Link></FadeUp> 
           
         ))}
