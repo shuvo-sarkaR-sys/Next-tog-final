@@ -13,7 +13,7 @@ const Content = () => {
     },[])
     const serviceShow = services.slice(0, 6)
   return (
-    <div id='services' className='bg-[#f6f6f6] mt-10 py-14'>
+    <div id='services' className='bg-[#f6f6f6] md:mt-10 mt-5 py-7 md:py-14'>
      <FadeUp> <h1 className='text-[#098de4] text-4xl text-center font-bold '>Happy Customer</h1></FadeUp>
       <div className='flex flex-wrap p-5 pt-15 sm:px-5 md:px-5 xl:px-40 gap-10'>
        

@@ -34,7 +34,7 @@ const Maps = () => {
 
   return (
     <div>
-     <FadeUp><h1 className='text-5xl my-20 text-center text-[#0866fd]'>OUR PRESENCE</h1></FadeUp> 
+     <FadeUp><h1 className='text-5xl my-10 md:my-20 text-center text-[#0866fd]'>OUR PRESENCE</h1></FadeUp> 
       {/* <FadeUp> 
       <div className='relative xl:mx-40 mx-0 md:mx-10'>
         <img className='max-w-[1300px]' src={mapImg} alt="" />
