@@ -12,7 +12,7 @@ const Blogs= () => {
   }, []);
     const latestBlogs = blogs.slice(0, 3)
   return (
-    <div className="flex gap-10 flex-wrap">
+    <div className="flex gap-10 justify-center flex-wrap">
        
       {latestBlogs.map(blog => (
         <FadeUp key={blog._id}>

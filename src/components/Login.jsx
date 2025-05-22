@@ -280,7 +280,7 @@ const Login = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    className="mt-1 h-10 pl-3 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>
                 <div>
@@ -292,7 +292,7 @@ const Login = () => {
                     value={formData.password}
                     onChange={handleChange}
                     required
-                    className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    className="mt-1 h-10 pl-3 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>
                 <button
@@ -311,15 +311,15 @@ const Login = () => {
           {step === 'forgot' && (
             <>
               <h2 className="text-xl font-semibold mb-4 text-center">Forgot Password</h2>
-              <input type="email" placeholder="Enter your email" name="email" onChange={handleChange} className="w-full p-2 border rounded mb-4" />
-              <button onClick={handleForgot} className="w-full bg-blue-600 text-white py-2 rounded">Send OTP</button>
+              <input type="email" placeholder="Enter your email" name="email" onChange={handleChange} className="w-full p-2 h-10 pl-3 border rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 mb-4" />
+              <button onClick={handleForgot} className="w-full  bg-blue-600 text-white py-2 rounded">Send OTP</button>
             </>
           )}
 
           {step === 'verify' && (
             <>
               <h2 className="text-xl font-semibold mb-4 text-center">Verify OTP</h2>
-              <input type="text" placeholder="Enter OTP" name="otp" onChange={handleChange} className="w-full p-2 border rounded mb-4" />
+              <input type="text" placeholder="Enter OTP" name="otp" onChange={handleChange} className="w-full p-2 border h-10 pl-3 rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 mb-4" />
               <button onClick={handleVerify} className="w-full bg-blue-600 text-white py-2 rounded">Verify</button>
             </>
           )}
@@ -327,7 +327,7 @@ const Login = () => {
           {step === 'reset' && (
             <>
               <h2 className="text-xl font-semibold mb-4 text-center">Reset Password</h2>
-              <input type="password" placeholder="New Password" name="newPassword" onChange={handleChange} className="w-full p-2 border rounded mb-4" />
+              <input type="password" placeholder="New Password" name="newPassword" onChange={handleChange} className="w-full p-2 border h-10 pl-3 rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 mb-4" />
               <button onClick={handleReset} className="w-full bg-blue-600 text-white py-2 rounded">Reset Password</button>
             </>
           )}
