@@ -20,7 +20,12 @@ const Partner = () => {
             <div className="w-full py-2  sm:py-10   xl:py-10 px-10 sm:px-20  md:px-20 xl:px-40 bg-[#bdbec0] ">
                 <Swiper 
                     modules={[Autoplay]}
-                    slidesPerView={6}
+                    slidesPerView={4}
+                    breakpoints={{
+                        1024: {
+                            slidesPerView: 6,
+                        }
+                    }}
                     spaceBetween={30}
                     loop={true}
                     autoplay={{

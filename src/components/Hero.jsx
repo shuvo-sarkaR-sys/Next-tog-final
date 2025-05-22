@@ -52,7 +52,7 @@ const Hero = () => {
     }, []);
   return (
     <div className="relative   w-full h-screen overflow-hidden">
-          <Link to='/login'><button onClick={handleAuthClick} className='absolute cursor-pointer hover:bg-black/5 top-8 z-30 right-28 py-3 px-6 rounded-3xl text-white border'>{isLoggedIn ? 'LogOut' : 'Login'}</button></Link>
+          <Link to='/login'><button onClick={handleAuthClick} className='absolute cursor-pointer hover:bg-black/5 top-8 z-30 right-26 py-3 px-6 rounded-3xl text-white border'>{isLoggedIn ? 'LogOut' : 'Login'}</button></Link>
           {/* navbar start from here */}
           <Navbar/>
     <img
@@ -61,11 +61,11 @@ const Hero = () => {
       className="w-full h-full object-cover animate-zoom"
     />
     <div className=' flex w-full justify-items-start md:justify-center absolute top-5 z-20'>
-    <FadeUp><Link to="/"><img className='  w-48' src={logo} alt="" /></Link></FadeUp>
+    <FadeUp><Link to="/"><img className=' w-36  md:w-48' src={logo} alt="" /></Link></FadeUp>
     </div>
      <div className='bg-black/10 h-full w-full absolute top-0 z-10'></div>
     <div className='absolute z-20 md:top-[400px] top-[250px] xl:top-[300px] w-full text-center'>
-      <FadeUp> <h1 className="text-white title-text text-5xl md:text-[60px] font-bold">
+      <FadeUp> <h1 className="text-white title-text text-5xl  md:text-[60px] font-bold">
   SIMPLIFY <span className="italic title-text-under font-normal">business</span>. SIMPLIFY <span className="italic title-text-under font-normal">life</span>.
 </h1></FadeUp>
     </div>

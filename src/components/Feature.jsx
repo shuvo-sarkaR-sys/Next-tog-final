@@ -17,13 +17,18 @@ const logos = [
 
 function Feature() {
   return (
-    <div className=" md:py-14 py-10 bg-[#f6f6f6]">
+    <div className=" md:py-14 py-7 bg-[#f6f6f6]">
    <FadeUp> <h1 className="text-[#098de4] titile-text  mb-10  text-center md:text-5xl text-3xl font-bold">News Feature</h1></FadeUp>
     <div className="w-full py-7 sm:py-10 xl:py-10 px-10 sm:px-20  md:px-20 xl:px-40 bg-[#bdbec0] ">
       <Swiper
         modules={[Autoplay]}
-        slidesPerView={6}
+        slidesPerView={4}
         spaceBetween={30}
+        breakpoints={{
+          1024: {
+            slidesPerView: 6,
+          }
+        }}
         loop={true}
         autoplay={{
           delay: 1000,
